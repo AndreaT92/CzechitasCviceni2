@@ -44,9 +44,6 @@ public class Program
             15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
         };
 
-
-
-
         // 2. Řešení
         List<int> nasobky4a6 = ruznaCisla.Where(c => c % 4 == 0 || c % 6 == 0).ToList();
 
@@ -55,15 +52,16 @@ public class Program
             Console.WriteLine(cislo);
         }
 
-        
         // 3. Kolik je v seznamu ruznaCisla čísel?
         // Console.WriteLine(?????);
-
-        Console.WriteLine(ruznaCisla.Count());
+        int pocetCisel = ruznaCisla.Count();
+        Console.WriteLine($"Počet čísel je: {pocetCisel});
 
         // počet unikátních čísel
+        int pocetUnikatnichCisel = ruznaCisla
+            .Distinct()
+            .Count();
 
-        Console.WriteLine(ruznaCisla.Distinct().Count());
         // ==========================================
         // 4. Seřaďte jména vzestupně
         List<string> jmena = new List<string>()
@@ -76,7 +74,8 @@ public class Program
         };
 
         // 4. Řešení
-        List<string> vzestupne = null;
+        List<string> vzestupne = new List<string>(jmena); 
+        vzestupne.Sort(); 
 
         foreach (string text in vzestupne)
         {
