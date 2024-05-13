@@ -161,8 +161,6 @@
             {
                 Console.WriteLine($"{milionar.Jmeno} v {milionar.Banka}");
             }
-
-            Console.WriteLine("Ahoj.");
         }
     }
 }
