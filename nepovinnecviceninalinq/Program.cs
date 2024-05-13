@@ -73,8 +73,7 @@
         };
 
             // 4. Řešení
-            List<string> vzestupne = new List<string>(jmena); 
-            vzestupne.Sort();
+            List<string> vzestupne = jmena.Order().ToList();
             Console.WriteLine("Jména vzestupně:");
             foreach (string text in vzestupne)
             {
@@ -125,12 +124,14 @@
 
             // 7. Řešení
             Console.WriteLine("Milionáři podle bank jsou:");
-            var skupinyPodleBanky = zakaznici.GroupBy(z => z.Banka)
-                                              .Select(g => new SkupinaMilionaru
-                                              {
-                                                  Banka = g.Key,
-                                                  Milionari = g.Where(z => z.Zustatek >= 1000000).Select(z => z.Jmeno)
-                                              });
+            var skupinyPodleBanky = zakaznici
+                                    .Where(z => z.Zustatek >= 1000000)
+                                    .GroupBy( z => z.Banka, (banka, milionari) => new SkupinaMilionaru
+                                     {
+                                        Banka = banka,
+                                        Milionari = milionari.Select(m => m.Jmeno)
+                                     }
+    );
 
             foreach (var polozka in skupinyPodleBanky)
             {
@@ -150,13 +151,15 @@
             // Napr
             // Jan Novak v Ceska Sporitelna
             // Josef Novotny v Komercni Banka
-            Console.WriteLine("Milionáři a jejich banky:");
-            List<Zakaznik> reportMilionaru = zakaznici.Where(z => z.Zustatek >= 1000000).ToList();
+            Console.WriteLine("Milionáři a jejich banky celým jménem:");
+            var reportMilionaru = from zakaznik in zakaznici
+                                  where zakaznik.Zustatek >= 1000000
+                                  join banka in banky on zakaznik.Banka equals banka.Symbol
+                                  select new { Jmeno = zakaznik.Jmeno, Banka = banka.Jmeno };
 
-            foreach (Zakaznik zakaznik in reportMilionaru)
+            foreach (var milionar in reportMilionaru)
             {
-                Banka banka = banky.Find(b => b.Symbol == zakaznik.Banka);
-                Console.WriteLine($"{zakaznik.Jmeno} v {banka?.Jmeno}");
+                Console.WriteLine($"{milionar.Jmeno} v {milionar.Banka}");
             }
         }
     }
