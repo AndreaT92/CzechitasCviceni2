@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pracestextem", "pracestexte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "breakoutroomnadatum", "breakoutroomnadatum\breakoutroomnadatum.csproj", "{2EF7D4DD-AC57-49BA-9C10-915AF0EC9063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zkusebniprojekt", "zkusebniprojekt\zkusebniprojekt.csproj", "{B61C427A-FC52-4620-9C58-B70EC22E51B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zkusebniprojekt", "zkusebniprojekt\zkusebniprojekt.csproj", "{B61C427A-FC52-4620-9C58-B70EC22E51B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NepovinneCviceniNaLinq", "NepovinneCviceniNaLinq\NepovinneCviceniNaLinq.csproj", "{604916C7-0FC8-471F-AAAC-55069B95B270}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B61C427A-FC52-4620-9C58-B70EC22E51B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B61C427A-FC52-4620-9C58-B70EC22E51B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B61C427A-FC52-4620-9C58-B70EC22E51B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604916C7-0FC8-471F-AAAC-55069B95B270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604916C7-0FC8-471F-AAAC-55069B95B270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604916C7-0FC8-471F-AAAC-55069B95B270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604916C7-0FC8-471F-AAAC-55069B95B270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

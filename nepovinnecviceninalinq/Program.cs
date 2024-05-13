@@ -1,4 +1,4 @@
-﻿namespace nepovinnecviceninalinq
+﻿namespace NepovinneCviceniNaLinq
 {
     // Definice Banky
     public class Banka
@@ -126,11 +126,11 @@
             Console.WriteLine("Milionáři podle bank jsou:");
             var skupinyPodleBanky = zakaznici
                                     .Where(z => z.Zustatek >= 1000000)
-                                    .GroupBy( z => z.Banka, (banka, milionari) => new SkupinaMilionaru
-                                     {
+                                    .GroupBy(z => z.Banka, (banka, milionari) => new SkupinaMilionaru
+                                    {
                                         Banka = banka,
                                         Milionari = milionari.Select(m => m.Jmeno)
-                                     }
+                                    }
     );
 
             foreach (var polozka in skupinyPodleBanky)
@@ -161,6 +161,8 @@
             {
                 Console.WriteLine($"{milionar.Jmeno} v {milionar.Banka}");
             }
+
+            Console.WriteLine("Ahoj.");
         }
     }
 }
