@@ -45,20 +45,9 @@ namespace NepovinnyUkolOOP
             }
         }
 
-        public double Obsah
-        {
-            get
-            {
-                return Sirka * Vyska;
-            }
-        }
-        public double Obvod
-        {
-            get
-            {
-                return 2 * (Sirka + Vyska);
-            }
-        }
+        public double Obsah => Sirka * Vyska;
+        public double Obvod => 2 * (Sirka + Vyska); 
+        
 
         public Obdelnik(double sirka, double vyska)
         {
@@ -71,17 +60,16 @@ namespace NepovinnyUkolOOP
 
         }
 
+        public void Zvetsi(double sirka, double vyska)
+        {
+            Sirka += sirka;
+            Vyska += vyska;
+        }
+
         public void Vypis()
         {
-            Console.WriteLine($"Sirka: {Sirka}, Vyska: {Vyska}, Obsah: {Obsah}, Obvod: {Obvod}");
+            Console.WriteLine($"Sirka: {Sirka}, Vyska: {Vyska}, Obsah: {Obsah} a Obvod: {Obvod}");
         }
-        public void Zvetsi(double zvysitSirka, double zvysitVyska)
-        {
-            Sirka += zvysitSirka;
-            Vyska += zvysitVyska;
-        }
-
-
     }
-    }
+}
 
