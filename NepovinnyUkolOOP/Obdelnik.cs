@@ -18,7 +18,7 @@ namespace NepovinnyUkolOOP
             {
                 if (value == 0)
                 {
-                    Console.WriteLine("Sirka nesmí být nula. Hodnota byla nastavena na 1.");
+                    Console.WriteLine("Sirka nesmi byt nula. Hodnota byla nastavena na 1.");
                     sirka = 1;
                 }
                 else
@@ -28,6 +28,24 @@ namespace NepovinnyUkolOOP
             }
         }
 
+        // varianta s init, nelze kvůli metodě Zvetsi :
+        //        public double Sirka
+        //    {
+        //            get => sirka;
+        //            init
+        //    {
+        //                if (value == 0)
+        //                {
+        //                    Console.WriteLine("Sirka nesmi byt nula. Hodnota byla nastavena na 1.");
+        //                    sirka = 1;
+        //                }
+        //                else
+        //                {
+        //                    sirka = value;
+        //                }
+        //            }
+        //        }
+
         public double Vyska
         {
             get { return vyska; }
@@ -35,7 +53,7 @@ namespace NepovinnyUkolOOP
             {
                 if (value == 0)
                 {
-                    Console.WriteLine("Vyska nesmí být nula. Hodnota byla nastavena na 1.");
+                    Console.WriteLine("Vyska nesmi byt nula. Hodnota byla nastavena na 1.");
                     vyska = 1;
                 }
                 else
