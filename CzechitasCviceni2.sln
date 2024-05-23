@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NepovinneCviceniNaLinq", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreakoutRoom165", "BreakoutRoom165\BreakoutRoom165.csproj", "{A91882C9-C5D8-4933-97B1-134038C93667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NepovinnyUkolOOP", "NepovinnyUkolOOP\NepovinnyUkolOOP.csproj", "{9DCD2A60-218E-4955-81B5-69075FD2A228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NepovinnyUkolOOP", "NepovinnyUkolOOP\NepovinnyUkolOOP.csproj", "{9DCD2A60-218E-4955-81B5-69075FD2A228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CviceniDedicnost", "Cviceni235\CviceniDedicnost.csproj", "{1AE889C9-63E3-48DB-83A8-AF6A3A201283}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{9DCD2A60-218E-4955-81B5-69075FD2A228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DCD2A60-218E-4955-81B5-69075FD2A228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DCD2A60-218E-4955-81B5-69075FD2A228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE889C9-63E3-48DB-83A8-AF6A3A201283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE889C9-63E3-48DB-83A8-AF6A3A201283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE889C9-63E3-48DB-83A8-AF6A3A201283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE889C9-63E3-48DB-83A8-AF6A3A201283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
